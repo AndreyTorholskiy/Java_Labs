@@ -51,7 +51,7 @@ public class MatrixOperations {
 
     }
 
-    private void getMatrixSize(Scanner scanner) {
+    public void getMatrixSize(Scanner scanner) {
         System.out.print("Enter size of matrix rows (not greater than " + MAX_SIZE_MATRIX + "): ");
         rows = scanner.nextInt();
 
@@ -64,11 +64,11 @@ public class MatrixOperations {
         }
     }
 
-    private void createMatrix() {
+    public void createMatrix() {
         matrix = new int[rows][columns];
     }
 
-    private void fillMatrixManually(Scanner scanner) {
+    public void fillMatrixManually(Scanner scanner) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.println("Enter element [" + i + "][" + j + "]:");
@@ -77,7 +77,7 @@ public class MatrixOperations {
         }
     }
 
-    private void fillMatrixRandomly(Random random) {
+    public void fillMatrixRandomly(Random random) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 matrix[i][j] = random.nextInt(MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER + 1) + MIN_RANDOM_NUMBER;
@@ -85,7 +85,7 @@ public class MatrixOperations {
         }
     }
 
-    private void printMatrix(int[][] matrix) {
+    public void printMatrix(int[][] matrix) {
         System.out.println("Matrix:");
         for (int[] row : matrix) {
             for (int rowElement : row) {
@@ -95,7 +95,7 @@ public class MatrixOperations {
         }
     }
 
-    private int getMinimalMatrixElement(int[][] matrix) {
+    public int getMinimalMatrixElement(int[][] matrix) {
         int minElement = matrix[0][0];
         for (int[] row : matrix) {
             for (int rowElement : row) {
@@ -107,7 +107,7 @@ public class MatrixOperations {
         return minElement;
     }
 
-    private int getMaximalMatrixElement(int[][] matrix) {
+    public int getMaximalMatrixElement(int[][] matrix) {
         int maxElement = matrix[0][0];
         for (int[] row : matrix) {
             for (int rowElement : row) {
@@ -119,7 +119,7 @@ public class MatrixOperations {
         return maxElement;
     }
 
-    private double getMatrixAverage(int[][] matrix) {
+    public double getMatrixAverage(int[][] matrix) {
         double sumElements = 0;
         int countElements = 0;
         for (int[] row : matrix) {
