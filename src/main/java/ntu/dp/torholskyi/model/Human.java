@@ -11,7 +11,8 @@ public abstract class Human {
     private String patronymic;
     private Sex sex;
 
-    public String nameOfHuman() {
+    @Override
+    public String toString() {
         return firstName + " " + lastName + " " + patronymic + " (" + sex + ")";
     }
 }

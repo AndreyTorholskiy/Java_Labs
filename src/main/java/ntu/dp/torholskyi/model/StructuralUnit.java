@@ -1,0 +1,18 @@
+package ntu.dp.torholskyi.model;
+
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public abstract class StructuralUnit<T> {
+    private String name;
+    private Human human;
+    private List<T> children;
+
+    public StructuralUnit(String name, Human human, List<T> children) {
+        this.name = name;
+        this.human = human;
+        this.children = children;
+    }
+}

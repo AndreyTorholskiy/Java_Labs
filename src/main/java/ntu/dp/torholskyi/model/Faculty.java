@@ -1,4 +1,4 @@
 package ntu.dp.torholskyi.model;
 
-public class Faculty {
+public class Faculty extends StructuralUnit<Group>{
 }
