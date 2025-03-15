@@ -1,4 +1,6 @@
 package ntu.dp.torholskyi.model;
 
-public class Sex {
+public enum Sex {
+    FEMALE,
+    MALE
 }
