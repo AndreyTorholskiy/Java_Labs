@@ -14,7 +14,7 @@ public class JsonManager {
     public void saveUniversityToJson(University university, String filePath) {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
-                .registerTypeAdapter(Human.class, new HumanAdapter()) // Register the adapter here
+                .registerTypeAdapter(Human.class, new HumanAdapter())
                 .create();
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(university, writer);
@@ -25,7 +25,7 @@ public class JsonManager {
 
     public University loadUniversityFromJson(String filePath) {
         Gson gson = new GsonBuilder()
-                .registerTypeAdapter(Human.class, new HumanAdapter()) // Register the adapter here
+                .registerTypeAdapter(Human.class, new HumanAdapter())
                 .create();
         try (FileReader reader = new FileReader(filePath)) {
             return gson.fromJson(reader, University.class);

@@ -39,10 +39,8 @@ class JsonManagerTest {
         Run run = new Run();
         University originalUniversity = run.createTypicalUniversity();
 
-        // Save a university to a file
         jsonManager.saveUniversityToJson(originalUniversity, FILE_PATH);
 
-        // Load the university from the file
         University loadedUniversity = jsonManager.loadUniversityFromJson(FILE_PATH);
 
         assertNotNull(loadedUniversity, "Loaded university should not be null");
