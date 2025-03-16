@@ -12,10 +12,6 @@ public class University extends StructuralUnit<Faculty> {
         super(name, human, children);
     }
 
-    public void addFaculty(Faculty faculty) {
-        getChildren().add(faculty);
-    }
-
     @Override
     public String toString() {
         return "University: " + getName() + ", Head: " + getHuman() + ", Faculties: " + getChildren();

@@ -8,10 +8,10 @@ import java.util.List;
 public class Run {
     public static void main(String[] args) {
         Run run = new Run();
-        run.createTypicalUniversity();
+        System.out.println(run.createTypicalUniversity());
     }
 
-    public void createTypicalUniversity() {
+    public University createTypicalUniversity() {
         Human universityHead = new Head("Michael", "Anderson", "Smith", Sex.MALE);
         Human facultyHead = new Head("Sophia", "Miller", "Johnson", Sex.FEMALE);
         Human departmentHead = new Head("Christopher", "Brown", "Davis", Sex.MALE);
@@ -28,8 +28,6 @@ public class Run {
 
         Faculty faculty = new FacultyCreator().create("Faculty of Engineering", facultyHead, List.of(department));
 
-        University university = new UniversityCreator().create("NTU Politech university", universityHead, List.of(faculty));
-
-        System.out.println(university);
+        return new UniversityCreator().create("NTU Politech university", universityHead, List.of(faculty));
     }
 }
