@@ -12,10 +12,6 @@ public class Department extends StructuralUnit<Group> {
         super(name, human, children);
     }
 
-    public void addGroup(Group group) {
-        getChildren().add(group);
-    }
-
     @Override
     public String toString() {
         return "Department: " + getName() + ", Head: " + getHuman() + ", Groups: " + getChildren();

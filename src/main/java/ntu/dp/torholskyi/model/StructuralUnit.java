@@ -3,6 +3,7 @@ package ntu.dp.torholskyi.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -15,6 +16,6 @@ public abstract class StructuralUnit<T> {
     public StructuralUnit(String name, Human human, List<T> children) {
         this.name = name;
         this.human = human;
-        this.children = children;
+        this.children = new ArrayList<>(children);
     }
 }

@@ -12,10 +12,6 @@ public class Group extends StructuralUnit<Student> {
         super(name, human, children);
     }
 
-    public void addStudent(Student student) {
-        getChildren().add(student);
-    }
-
     @Override
     public String toString() {
         return "Group: " + getName() + ", Head: " + getHuman() + ", Students: " + getChildren();

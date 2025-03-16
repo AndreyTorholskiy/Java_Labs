@@ -3,7 +3,6 @@ package ntu.dp.torholskyi;
 import ntu.dp.torholskyi.controller.*;
 import ntu.dp.torholskyi.model.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Run {
@@ -13,43 +12,23 @@ public class Run {
     }
 
     public void createTypicalUniversity() {
-        // Створення керівників
-        Human universityHead = new Head("Іван", "Іванов", "Іванович", Sex.MALE);
-        Human facultyHead = new Head("HH", "Іванов", "Іванович", Sex.MALE);
-        Human departmentHead = new Head("ee", "Іванов", "Іванович", Sex.MALE);
-        Human groupHead = new Head("FF", "Іванов", "Іванович", Sex.MALE);
+        Human universityHead = new Head("Michael", "Anderson", "Smith", Sex.MALE);
+        Human facultyHead = new Head("Sophia", "Miller", "Johnson", Sex.FEMALE);
+        Human departmentHead = new Head("Christopher", "Brown", "Davis", Sex.MALE);
+        Human groupHead = new Head("Daniel", "Wilson", "Thomas", Sex.MALE);
 
-        // Створення студентів
-        Student student1 = new Student("Олександр", "Петренко", "Володимирович", Sex.MALE);
-        Student student2 = new Student("Марія", "Коваленко", "Олексіївна", Sex.FEMALE);
-        List<Student> students = new ArrayList<>();
-        students.add(student1);
-        students.add(student2);
+        List<Student> students = List.of(
+                new Student("James", "Taylor", "Moore", Sex.MALE),
+                new Student("Emily", "Harris", "Clark", Sex.FEMALE)
+        );
 
-        // Створення групи
-        GroupCreator groupCreator = new GroupCreator();
-        Group group = groupCreator.create("Група 1", groupHead, students);
+        Group group = new GroupCreator().create("123m-24-1", groupHead, students);
 
-        List<Group> groups = new ArrayList<>();
-        groups.add(group);
+        Department department = new DepartmentCreator().create("Computer Science", departmentHead, List.of(group));
 
-        // Створення кафедри
-        DepartmentCreator departmentCreator = new DepartmentCreator();
-        Department department = departmentCreator.create("Кафедра інформатики", departmentHead, groups);
+        Faculty faculty = new FacultyCreator().create("Faculty of Engineering", facultyHead, List.of(department));
 
-        List<Department> departments = new ArrayList<>();
-        departments.add(department);
-
-        // Створення факультету
-        FacultyCreator facultyCreator = new FacultyCreator();
-        Faculty faculty = facultyCreator.create("Факультет комп'ютерних наук", facultyHead, departments);
-
-        List<Faculty> faculties = new ArrayList<>();
-        faculties.add(faculty);
-
-        // Створення університету
-        UniversityCreator universityCreator = new UniversityCreator();
-        University university = universityCreator.create("Університет IT", universityHead, faculties);
+        University university = new UniversityCreator().create("NTU Politech university", universityHead, List.of(faculty));
 
         System.out.println(university);
     }
