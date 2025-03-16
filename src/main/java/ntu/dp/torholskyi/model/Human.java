@@ -2,9 +2,11 @@ package ntu.dp.torholskyi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public abstract class Human {
     private String firstName;
     private String lastName;
