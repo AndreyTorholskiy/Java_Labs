@@ -1,0 +1,60 @@
+{
+  "name": "NTU Politech university",
+  "human": {
+    "type": "Head",
+    "firstName": "Michael",
+    "lastName": "Anderson",
+    "patronymic": "Smith",
+    "sex": "MALE"
+  },
+  "children": [
+    {
+      "name": "Faculty of Engineering",
+      "human": {
+        "type": "Head",
+        "firstName": "Sophia",
+        "lastName": "Miller",
+        "patronymic": "Johnson",
+        "sex": "FEMALE"
+      },
+      "children": [
+        {
+          "name": "Computer Science",
+          "human": {
+            "type": "Head",
+            "firstName": "Christopher",
+            "lastName": "Brown",
+            "patronymic": "Davis",
+            "sex": "MALE"
+          },
+          "children": [
+            {
+              "name": "123m-24-1",
+              "human": {
+                "type": "Head",
+                "firstName": "Daniel",
+                "lastName": "Wilson",
+                "patronymic": "Thomas",
+                "sex": "MALE"
+              },
+              "children": [
+                {
+                  "firstName": "James",
+                  "lastName": "Taylor",
+                  "patronymic": "Moore",
+                  "sex": "MALE"
+                },
+                {
+                  "firstName": "Emily",
+                  "lastName": "Harris",
+                  "patronymic": "Clark",
+                  "sex": "FEMALE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
