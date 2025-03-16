@@ -7,9 +7,6 @@ import ntu.dp.torholskyi.model.University;
 import java.util.List;
 
 public class UniversityCreator extends AbstractCreator<Faculty> {
-    public UniversityCreator(String name, Human human, List<Faculty> children) {
-        super(name, human, children);
-    }
     @Override
     public University create(String name, Human human, List<Faculty> children) {
         return new University(name, human, children); // Повертаємо об'єкт University

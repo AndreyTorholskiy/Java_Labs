@@ -18,6 +18,6 @@ public class Department extends StructuralUnit<Group> {
 
     @Override
     public String toString() {
-        return "Department: " + getName() + ", Groups: " + getChildren();
+        return "Department: " + getName() + ", Head: " + getHuman() + ", Groups: " + getChildren();
     }
 }
