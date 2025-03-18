@@ -1,0 +1,30 @@
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    last_name VARCHAR(50),
+    first_name VARCHAR(50),
+    middle_name VARCHAR(50),
+    birth_date DATE,
+    gradebook_number VARCHAR(20)
+);
+
+INSERT INTO students (last_name, first_name, middle_name, birth_date, gradebook_number) VALUES
+('Johnson', 'John', 'William', '2000-01-15', 'GB1001'),
+('Smith', 'Peter', 'Michael', '2001-02-20', 'GB1002'),
+('Brown', 'Olivia', 'Sophia', '2000-03-05', 'GB1003'),
+('Davis', 'Emily', 'Elizabeth', '1999-04-10', 'GB1004'),
+('Wilson', 'James', 'Alexander', '2001-05-25', 'GB1005'),
+('Taylor', 'Daniel', 'Christopher', '2002-07-07', 'GB1006'),
+('Anderson', 'Emma', 'Madison', '2000-08-12', 'GB1007'),
+('Thomas', 'Liam', 'Benjamin', '2002-09-30', 'GB1008'),
+('White', 'Sophia', 'Grace', '1998-10-05', 'GB1009'),
+('Harris', 'Lucas', 'Matthew', '2001-11-18', 'GB1010'),
+('Martin', 'Henry', 'David', '2003-12-25', 'GB1011'),
+('Clark', 'Ethan', 'Joseph', '2000-01-08', 'GB1012'),
+('Lewis', 'Mia', 'Victoria', '2001-02-14', 'GB1013'),
+('Walker', 'Aiden', 'Samuel', '2002-03-29', 'GB1014'),
+('Allen', 'Ella', 'Isabella', '1999-04-22', 'GB1015'),
+('Young', 'Nathan', 'Gabriel', '2003-05-15', 'GB1016'),
+('King', 'Lily', 'Charlotte', '2002-07-19', 'GB1017'),
+('Scott', 'Zoe', 'Amelia', '1998-08-03', 'GB1018'),
+('Green', 'Mason', 'Daniel', '2000-09-09', 'GB1019'),
+('Baker', 'Ava', 'Scarlett', '2001-10-20', 'GB1020');
