@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Student extends Human {
     private String gradeBookNumber;
 
-    public Student(long id, String firstName, String middleName, String lastName, Date birthDate, String gradeBookNumber) {
+    public Student(long id, String firstName, String middleName, String lastName, String birthDate, String gradeBookNumber) {
         super(id, firstName, middleName, lastName, birthDate);
         this.gradeBookNumber = gradeBookNumber;
     }

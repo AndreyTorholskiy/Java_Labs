@@ -2,17 +2,15 @@ package ntu.dp.torholskyi.model;
 
 import lombok.Data;
 
-import java.sql.Date;
-
 @Data
 public abstract class Human {
     private long id;
     private String firstName;
     private String middleName;
     private String lastName;
-    private Date birthDate;
+    private String birthDate;
 
-    public Human(long id, String firstName, String middleName, String lastName, Date birthDate) {
+    public Human(long id, String firstName, String middleName, String lastName, String birthDate) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
