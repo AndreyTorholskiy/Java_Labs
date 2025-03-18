@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 public class ConnectionManager {
     PropertiesUtil propertiesUtil = new PropertiesUtil();
 
-    private final String URL = propertiesUtil.getProperty("url");
-    private final String USER = propertiesUtil.getProperty("user");
-    private final String PASSWORD = propertiesUtil.getProperty("password");
+    private final String URL = propertiesUtil.getProperty("db.url");
+    private final String USER = propertiesUtil.getProperty("db.user");
+    private final String PASSWORD = propertiesUtil.getProperty("db.password");
 
     public Connection open() {
         try {

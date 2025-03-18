@@ -1,9 +1,43 @@
 package ntu.dp.torholskyi;
 
+import ntu.dp.torholskyi.dao.StudentsDAO;
+import ntu.dp.torholskyi.model.Student;
+import ntu.dp.torholskyi.service.StudentService;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        StudentsDAO studentsDAO = new StudentsDAO();
+        StudentService studentService = new StudentService();
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter month (1-12): ");
+        int month = scanner.nextInt();
 
+        System.out.println("\nDB menu options!\n");
+        System.out.println("1. Show all students from db and filter them");
+        System.out.println("2. Show all students from db by month");
+        int option = scanner.nextInt();
+
+        List<Student> students = List.of();
+
+        switch (option) {
+            case 1:
+                students = studentService.filterStudentsByMonth(studentsDAO.getStudents(),month);
+                break;
+            case 2:
+                students = studentsDAO.getStudentsByMonth(month);
+        }
+
+        if (students.isEmpty()) {
+            System.out.println("No students born by month " + month);
+        } else {
+            System.out.println("List of students:");
+            students.forEach(System.out::println);
+        }
 
 
 

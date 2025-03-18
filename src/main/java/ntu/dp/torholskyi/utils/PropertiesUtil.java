@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public final class PropertiesUtil {
     private final Properties PROPERTIES = new Properties();
-    private final String PATH = "src/main/java/ntu/dp/torholskyi/resources/database.txt";
+    private final String PATH = "src/main/java/ntu/dp/torholskyi/resources/db.properties";
 
     public PropertiesUtil() {
         loadProperties();
@@ -24,4 +24,5 @@ public final class PropertiesUtil {
             throw new RuntimeException(e);
         }
     }
+
 }
