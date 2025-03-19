@@ -22,13 +22,11 @@ public class Main {
 
         List<Student> students = List.of();
 
-        switch (option) {
-            case 1:
-                students = studentsDAO.getStudents();
-                break;
-            case 2:
-                students = studentsDAO.getStudentsByMonth(month);
-        }
+        students = switch (option) {
+            case 1 -> studentsDAO.getStudents();
+            case 2 -> studentsDAO.getStudentsByMonth(month);
+            default -> students;
+        };
 
         if (students.isEmpty()) {
             System.out.println("No students born in month " + month);
