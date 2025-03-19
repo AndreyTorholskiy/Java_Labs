@@ -16,7 +16,7 @@ public class Main {
         int month = scanner.nextInt();
 
         System.out.println("\nDB menu options!\n");
-        System.out.println("1. Show all students from db and filter them");
+        System.out.println("1. Show all students from db");
         System.out.println("2. Show all students from db by month");
         int option = scanner.nextInt();
 

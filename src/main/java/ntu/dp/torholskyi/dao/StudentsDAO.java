@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentsDAO {
-    private static final String QUERY_FOR_ALL_STUDENTS = "select * from STUDENTS";
+    private static final String QUERY_FOR_ALL_STUDENTS = "SELECT * FROM STUDENTS";
     private static final String QUERY_FOR_ALL_STUDENTS_BY_MONTH = "SELECT * FROM STUDENTS WHERE MONTH(birth_date) = ?";
 
-    public List<Student> getStudents(){
+    public List<Student> getStudents() throws SQLException {
         List<Student> students = new ArrayList<>();
 
         try (Connection connection = new ConnectionManager().open();
