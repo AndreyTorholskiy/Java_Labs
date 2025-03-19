@@ -34,5 +34,7 @@ public class Main {
             System.out.println("List of students born in month "+month+":");
             students.forEach(System.out::println);
         }
+
+        scanner.close();
     }
 }
